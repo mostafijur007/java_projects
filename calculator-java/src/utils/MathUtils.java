@@ -1,3 +1,4 @@
+package utils;
 public class MathUtils {
     public static double add(double a, double b) {
         return a + b;

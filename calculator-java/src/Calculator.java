@@ -1,14 +1,8 @@
 import java.util.Scanner;
+import utils.MathUtils;
 
 public class Calculator {
     public static void main(String[] args) {
-        // double num1 = 10;
-        // double num2 = 5;
-
-        // System.out.println("Addition: " + MathUtils.add(num1, num2));
-        // System.out.println("Subtraction: " + MathUtils.subtract(num1, num2));
-        // System.out.println("Multiplication: " + MathUtils.multiply(num1, num2));
-        // System.out.println("Division: " + MathUtils.divide(num1, num2));
 
         Calculator demo = new Calculator();
 
@@ -43,8 +37,11 @@ public class Calculator {
                     System.out.println("Result: " + MathUtils.multiply(firstNumberInput, secondNumberInput));
                     break;
                 case 4:
-                   
-                    System.out.println("Result: " + MathUtils.divide(firstNumberInput, secondNumberInput));
+                    if (secondNumberInput == 0) {
+                        System.out.println("Error: Cannot divide by zero.");
+                    } else {
+                        System.out.println("Division: " + MathUtils.divide(firstNumberInput, secondNumberInput));
+                    }
                     break;
                 default:
                     System.out.println("Invalid operation.");
